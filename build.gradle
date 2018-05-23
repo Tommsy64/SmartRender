@@ -66,14 +66,12 @@ processResources {
         expand 'version': project.simpleVersion, 'mcversion': config.minecraft.version
     }
     from(sourceSets.main.resources.srcDirs) {
-        include 'application.conf'
         filter { line ->
             line.replaceAll("@VERSION@", project.simpleVersion)
         }
     }
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
-        exclude 'application.conf'
     }
 }
 
@@ -85,6 +83,7 @@ jar {
     }
 }
 
+// this is needed for IntelliJ so we don't have to copy over the assets manually every time
 idea {
     module {
         outputDir = file('build/classes/main')
