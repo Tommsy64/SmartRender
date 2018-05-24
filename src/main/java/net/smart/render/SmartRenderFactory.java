@@ -58,7 +58,8 @@ public class SmartRenderFactory<T extends Render<AbstractClientPlayer>> implemen
 
 		Reflect.SetField(RenderManager.class, manager, SmartRenderInstall.RenderManager_renderPlayer, defaultRender);
 
-		Map skinMap = (Map)Reflect.GetField(RenderManager.class, manager, SmartRenderInstall.RenderManager_skinMap);
+		@SuppressWarnings("unchecked")
+		Map<String, Render<AbstractClientPlayer>> skinMap = (Map<String, Render<AbstractClientPlayer>>)Reflect.GetField(RenderManager.class, manager, SmartRenderInstall.RenderManager_skinMap);
 		skinMap.put("default", defaultRender);
 		skinMap.put("slim", slimRender);
 
