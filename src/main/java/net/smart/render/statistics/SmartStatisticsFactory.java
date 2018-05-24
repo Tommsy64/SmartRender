@@ -70,7 +70,7 @@ public class SmartStatisticsFactory
 
 	protected void doHandleMultiPlayerTick(Minecraft minecraft)
 	{
-		Iterator<?> others = minecraft.theWorld.playerEntities.iterator();
+		Iterator<?> others = minecraft.world.playerEntities.iterator();
 		while(others.hasNext())
 		{
 			Entity player = (Entity)others.next();
@@ -112,7 +112,7 @@ public class SmartStatisticsFactory
 		SmartStatisticsOther statistics = tryGetOtherStatistics(entityId);
 		if(statistics == null)
 		{
-			Entity entity = Minecraft.getMinecraft().theWorld.getEntityByID(entityId);
+			Entity entity = Minecraft.getMinecraft().world.getEntityByID(entityId);
 			if(entity != null && entity instanceof EntityOtherPlayerMP)
 				statistics = addOtherStatistics((EntityOtherPlayerMP)entity);
 		}

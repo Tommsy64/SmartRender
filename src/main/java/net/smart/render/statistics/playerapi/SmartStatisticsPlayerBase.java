@@ -30,7 +30,7 @@ public class SmartStatisticsPlayerBase extends ClientPlayerBase implements IEnti
 	}
 
 	@Override
-	public void afterMoveEntityWithHeading(float f, float f1)
+    public void afterMoveEntityWithHeading(float strafe, float vertical, float forward)
 	{
 		statistics.calculateAllStats(false);
 	}

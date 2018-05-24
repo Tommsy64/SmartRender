@@ -32,7 +32,7 @@ public abstract class SmartStatisticsContext
 	{
 		Minecraft minecraft = Minecraft.getMinecraft();
 
-		if(minecraft.theWorld != null && minecraft.theWorld.isRemote)
+		if(minecraft.world != null && minecraft.world.isRemote)
 			SmartStatisticsFactory.handleMultiPlayerTick(minecraft);
 	}
 }

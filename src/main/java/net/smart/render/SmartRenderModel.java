@@ -344,7 +344,7 @@ public class SmartRenderModel extends SmartRenderContext
 
 	public void animateWorkingBody()
 	{
-		float angle = MathHelper.sin(MathHelper.sqrt_float(mp.swingProgress) * Whole) * 0.2F;
+		float angle = MathHelper.sin(MathHelper.sqrt(mp.swingProgress) * Whole) * 0.2F;
 		bipedBreast.rotateAngleY = bipedBody.rotateAngleY += angle;
 		bipedBreast.rotationOrder = bipedBody.rotationOrder = ModelRotationRenderer.YXZ;
 		bipedLeftArm.rotateAngleX += angle;
@@ -357,7 +357,7 @@ public class SmartRenderModel extends SmartRenderContext
 		float f7 = MathHelper.sin(f6 * Half);
 		float f8 = MathHelper.sin(mp.swingProgress * Half) * -(bipedHead.rotateAngleX - 0.7F) * 0.75F;
 		bipedRightArm.rotateAngleX -= f7 * 1.2D + f8;
-		bipedRightArm.rotateAngleY += MathHelper.sin(MathHelper.sqrt_float(mp.swingProgress) * Whole) * 0.4F;
+		bipedRightArm.rotateAngleY += MathHelper.sin(MathHelper.sqrt(mp.swingProgress) * Whole) * 0.4F;
 		bipedRightArm.rotateAngleZ -= MathHelper.sin(mp.swingProgress * Half) * 0.4F;
 	}
 

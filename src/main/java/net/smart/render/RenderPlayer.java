@@ -81,7 +81,7 @@ public class RenderPlayer extends net.minecraft.client.renderer.entity.RenderPla
 	}
 
 	@Override
-	protected void rotateCorpse(AbstractClientPlayer entityplayer, float totalTime, float actualRotation, float f2)
+	protected void applyRotations(AbstractClientPlayer entityplayer, float totalTime, float actualRotation, float f2)
 	{
 		render.rotateCorpse(entityplayer, totalTime, actualRotation, f2);
 	}
@@ -89,7 +89,7 @@ public class RenderPlayer extends net.minecraft.client.renderer.entity.RenderPla
 	@Override
 	public void superRotateCorpse(AbstractClientPlayer entityplayer, float totalTime, float actualRotation, float f2)
 	{
-		super.rotateCorpse(entityplayer, totalTime, actualRotation, f2);
+		super.applyRotations(entityplayer, totalTime, actualRotation, f2);
 	}
 
 	@Override

@@ -191,7 +191,7 @@ public class SmartRenderRender extends SmartRenderContext
 	{
 		if(++previousRendererDataAccessCounter > 1000)
 		{
-			List<?> players = Minecraft.getMinecraft().theWorld.playerEntities;
+			List<?> players = Minecraft.getMinecraft().world.playerEntities;
 
 			Iterator<EntityPlayer> iterator = previousRendererData.keySet().iterator();
 			while(iterator.hasNext())
