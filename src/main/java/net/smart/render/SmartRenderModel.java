@@ -25,7 +25,6 @@ import org.lwjgl.opengl.GL11;
 
 import net.minecraft.client.model.*;
 import net.minecraft.entity.*;
-import net.minecraft.util.*;
 import net.smart.utilities.*;
 
 public class SmartRenderModel extends SmartRenderContext

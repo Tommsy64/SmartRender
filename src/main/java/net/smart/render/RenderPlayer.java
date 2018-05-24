@@ -57,13 +57,13 @@ public class RenderPlayer extends net.minecraft.client.renderer.entity.RenderPla
 	{
 		mainModel = modelBipedMain;
 
-		for (Object layer : this.layerRenderers)
+		for (LayerRenderer<AbstractClientPlayer> layer : this.layerRenderers)
 		{
 			if (layer instanceof LayerArmorBase)
 				Reflect.SetField(_modelArmorChestplate, layer, modelArmorChestplate);
 			if (layer instanceof LayerArmorBase)
 				Reflect.SetField(_modelArmor, layer, modelArmor);
-			if (layer instanceof LayerCustomHead)
+			if ((Object) layer instanceof LayerCustomHead) // ???
 				Reflect.SetField(_playerHead, layer, modelBipedMain.bipedHead);
 		}
 	}
@@ -170,7 +170,7 @@ public class RenderPlayer extends net.minecraft.client.renderer.entity.RenderPla
 
 	private final SmartRenderRender render;
 
-	private final static Field _modelArmorChestplate = Reflect.GetField(LayerArmorBase.class, SmartRenderInstall.LayerArmorBase_modelArmorChestplate);
+	private final static Field _modelArmorChestplate = Reflect.GetField(LayerArmorBase.class, SmartRenderInstall.LayerArmorBase_modelArmorLeggings);
 	private final static Field _modelArmor = Reflect.GetField(LayerArmorBase.class, SmartRenderInstall.LayerArmorBase_modelArmor);
 	private final static Field _playerHead = Reflect.GetField(LayerCustomHead.class, SmartRenderInstall.LayerCustomHead_playerHead);
 }

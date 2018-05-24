@@ -28,9 +28,9 @@ public class SmartRenderInstall
 	public final static Name ModelRenderer_textureOffsetY = new Name("textureOffsetY", "field_78813_p", "s");
 
 	public final static Name RenderPlayer_smallArms = new Name("smallArms", "field_177140_a", "a");
-	public final static Name LayerCustomHead_playerHead = new Name("field_177209_a", "field_177209_a", "a");
-	public final static Name LayerArmorBase_modelArmorChestplate = new Name("field_177186_d", "field_177186_d", "d");
-	public final static Name LayerArmorBase_modelArmor = new Name("field_177189_c", "field_177189_c", "c");
+	public final static Name LayerCustomHead_playerHead = new Name("modelRenderer", "field_177209_a", "a");
+	public final static Name LayerArmorBase_modelArmorLeggings = new Name("modelArmor", "field_177186_d", "d");
+	public final static Name LayerArmorBase_modelArmor = new Name("modelLeggings", "field_177189_c", "c");
 
 	public final static Name ModelPlayer_bipedCape = new Name("bipedCape", "field_178729_w", "w");
 	public final static Name ModelPlayer_bipedDeadmau5Head = new Name("bipedDeadmau5Head", "field_178736_x", "x");
